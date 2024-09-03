@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+.top-bar {
+    background-color: #4f4f91; /* Cor da linha azul */
+    height: 5px; /* Altura da linha azul */
+    width: 100%; /* A linha cobre toda a largura da tela */
+    margin-top: 10px; /* A linha fica 10px abaixo do topo da página */
+}
+
+.header-content {
+    display: flex; /* Usar Flexbox para controle do layout */
+    justify-content: space-between; /* Espaça os itens (logo e menu) */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    padding: 10px 20px; /* Adiciona espaçamento interno */
+}
+
+.logo {
+    height: 50px; /* Altura da logo */
+    width: auto; /* Mantém a proporção da imagem */
+}
+
+.menu {
+    display: flex; /* Usar Flexbox para layout dos links do menu */
+    gap: 10px; /* Espaçamento entre os links */
+}
+
+.menu a {
+    color: #333; /* Cor dos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-weight: bold; /* Links em negrito */
+}
+
+.menu a::after {
+    content: "|"; /* Adiciona uma barra vertical após cada link */
+    margin-left: 5px; /* Espaçamento entre o link e a barra */
+    color: #333; /* Cor da barra */
+}
+
+.menu a:last-child::after {
+    content: ""; /* Remove a barra após o último link */
+}

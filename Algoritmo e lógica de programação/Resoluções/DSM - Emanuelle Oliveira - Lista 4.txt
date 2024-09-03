@@ -1,0 +1,108 @@
+Turma - DSM 2024/2
+Nome: Emanuelle Oliveira
+Disciplina: Algoritmos e lógica de programação
+
+###Lista de exercícios 4 
+
+##Resposta Exercício 1
+
+import random
+
+lista = random.sample(range(1, 100), 10)
+maior = lista[0]
+menor = lista[0]
+for número in lista[1: ]:
+    if número < menor:
+        menor = número
+    if número > maior:
+        maior = número
+print(f'Lista: {lista}')
+print(f"Maior número: {maior}")
+print(f"Menor número: {menor}")
+
+##Resposta Exercício 2
+
+import random
+
+lista = random.sample(range(1, 100), 20)
+par = []
+ímpar = []
+for número in lista:
+    if número % 2 == 0:
+        par.append(número)
+    else:
+        ímpar.append(número)
+
+print(f'Lista: {lista}')
+print(f"Lista par: {par}")
+print(f"Lista ímpar: {ímpar}")
+
+##Resposta Exercício 3
+
+import random
+
+vtr1 = random.sample(range(1, 100), 10)
+vtr2 = random.sample(range(1, 100), 10)
+vrt3 = []
+for número in range(10):
+    vrt3.append(vtr1[número])
+    vrt3.append(vtr2[número])
+
+print(f'Vetor 1: {vtr1}')
+print(f"Vetor 2: {vtr2}")
+print(f"Vetor 3: {vrt3}")
+        
+##Resposta Exercício 4
+
+texto = '''The Python Software Foundation and the global Python 
+community welcome and encourage participation by everyone. Our community is based on
+mutual respect, tolerance, and encouragement, and we are working to help each other live up
+to these principles. We want our community to be more diverse: whoever you are, and
+whatever your background, we welcome you.'''
+texto = texto.replace(':', ' ')
+texto = texto.replace(',', ' ')
+texto = texto.replace('.', ' ')
+texto = texto.lower()
+list_palavras = texto.split()
+python = set('python')
+lista = []
+for palavra in list_palavras:
+    if palavra[0] in python or palavra[-1] in python:
+        lista.append(palavra)
+print (lista)
+
+##Resposta Exercício 5
+
+texto = '''The Python Software Foundation and the global Python 
+community welcome and encourage participation by everyone. Our community is based on
+mutual respect, tolerance, and encouragement, and we are working to help each other live up
+to these principles. We want our community to be more diverse: whoever you are, and
+whatever your background, we welcome you.'''
+texto = texto.replace(':', ' ')
+texto = texto.replace(',', ' ')
+texto = texto.replace('.', ' ')
+texto = texto.lower()
+list_palavras = texto.split()
+python = set('python')
+lista = []
+
+def letra_py(palavra):
+    for letra in palavra:
+        if letra in python:
+            return True
+    return False
+
+for palavra in list_palavras:
+    if len(palavra) > 4 and letra_py(palavra):
+        lista.append(palavra)
+
+n_lista = len(lista)
+
+print(n_lista)
+print(lista)
+
+
+
+
+
+

@@ -1,0 +1,59 @@
+Turma - DSM 2024/2
+Nome: Emanuelle Oliveira
+Disciplina: Algoritmos e lógica de programação
+
+###Lista de exercícios 3
+
+##Resposta Exercício 1
+
+while True:
+    nota = float(input('Digite uma nota: '))
+    if nota < 0 or nota > 10:
+        print('Nota inválida. Por favor, insira uma nota entre 0 e 10.')
+    else:
+        print(f'Nota válida: {nota: .1f}')
+        break
+
+##Resposta Exercício 2
+
+while True:
+   usuário = str(input('Digite o nome de usuário: '))
+   senha = str(input('Digite sua senha: '))
+   if usuário == senha:
+      print ('Erro: usuário não pode ser igual a senha')
+   else:
+      print ('Bem vindo!')
+      break
+
+##Resposta Exercício 3
+
+país_A = 80000
+país_B = 200000
+taxa_A = 0.03
+taxa_B = 0.015
+n_anos = 0
+while país_A < país_B:
+    país_A = país_A + (país_A * taxa_A)
+    país_B = país_B + (país_B * taxa_B)
+    n_anos = n_anos + 1
+print( f'Número de anos necessários para o número de habitantes do País A ser igual ou maior que o número de habitantes do País B: {n_anos} anos' )  
+
+##Resposta Exercício 4
+
+a, b = 1, 1
+x = 1
+n = int(input('Digite o valor de n: ' ))
+while x <= n-2: 
+    a, b = b, a+b  
+    x = x + 1 
+print(b)
+
+##Resposta Exercício 5
+
+a = int(input('Digite o valor de a: '))
+b = int(input('Digite o valor de b: '))
+while a % b != 0:
+   a, b = b, a%b
+print (b)
+
+

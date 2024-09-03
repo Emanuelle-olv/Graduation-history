@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Blog</title>
+</head>
+<body>
+    
+    <header>
+        <h1>Bem-vindo ao Meu Blog de Design Digital</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <article>
+            <h2>Aprendendo os Elementos semânticos</h2>
+            <p><strong>&lt;header&gt;</strong>: Contém o título e uma breve descrição do blog.</p>
+            <p><strong>&lt;nav&gt;</strong>: Fornece links de navegação para diferentes seções do site.</p>
+            <p><strong>&lt;section&gt;</strong>: Agrupa o conteúdo principal da página, que neste caso é o post do blog.</p>
+            <p><strong>&lt;article&gt;</strong>: Contém o conteúdo do post de blog.</p>
+            <p><strong>&lt;aside&gt;</strong>: Serve como uma barra lateral que pode conter links para posts populares ou outros conteúdos relacionados.</p>
+            <p><strong>&lt;footer&gt;</strong>: Exibe informações de rodapé como direitos autorais.</p>
+        </article>
+
+        <article>
+            <h2>Aprendendo a Colocar imagem</h2>
+            <img  src="dog.jpg" alt="Doguinho"width="300" height="320">       </article>
+    </section>
+
+    <aside>
+        <h3>Links Úteis</h3>
+        <nav>
+            <ul>
+                
+                <li><a href="https://www.w3schools.com/html/html5_semantic_elements.asp">Elementos Semânticos W3C</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <footer>
+        <p>&copy; 2024 Meu Blog. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+<head>
+    <style>
+        .grid-container {
+        display: grid;
+        grid-template-columns: 70 30;
+        gap: 10px;
+        background-color: #2196F3;
+        padding: 10px;
+        box-sizing: border-box; /* Garante que padding e bordas sejam incluídos na largura total */
+    }
+
+    .grid-container > div {
+        background-color: rgba(255, 251, 255, 0.8);
+        text-align: center;
+        padding: 20px 0;
+        font-size: 30px;
+    }
+</style>
+    </head>
+    <body>
+        <h1>The grid-template-columns Property</h1>
+
+<p>Título tabela</p>
+
+<div class="grid-container">
+  <div>1</div>
+  <div>2</div>
+  </div>
+</html>

@@ -1,0 +1,103 @@
+Turma - DSM 2024/2
+Nome: Emanuelle Oliveira
+Disciplina: Algoritmos e lógica de programação
+
+###Lista de exercícios 2 
+
+##Resposta Exercício 1
+
+a = float(input("Medida lado a:  "))
+b = float(input("Medida lado b: "))
+c = float(input("Medida lado c: "))
+
+if a + b > c and a + c > b and b + c > a:
+ print ('É um triângulo!')
+ 
+if a == b == c:
+  print ("Triângulo equilátero")
+
+elif a == b or a == c or b == c:
+ print ("Triângulo isósceles")
+
+else: 
+ print ("Triângulo escaleno")
+
+##Resposta Exercício 2
+
+def isleap(ano):
+    return ano % 4 == 0 and (ano % 100 != 0 or ano % 400 == 0)
+
+ano = int(input('Digite o ano: '))
+
+if isleap(ano) is True:
+    print (f'{ano} é Bissexto')
+else:
+    print (f'{ano} NÃO é Bissexto')
+
+
+##Resposta Exercício 3
+
+peso_peixe = float(input('Digite o peso do peixe: '))
+
+if peso_peixe <= 50:
+    print ('Não há excesso')
+    excesso = 0
+    multa = 0
+    print (f'Multa {multa} reais')
+    print (f'Excesso {excesso}')
+
+else:
+    print ('Há excesso de peso')
+    excesso = peso_peixe - 50
+    multa = (peso_peixe - 50) * 4 
+    print (f'Multa {multa: .2f} reais')
+    print (f'Excesso {excesso: .2f}')
+
+##Resposta Exercício 4
+
+a = float(input('Digite o primeiro número: '))
+b = float(input('Digite o segundo número: '))
+c = float(input('Digite o terceiro número: '))
+
+maior_num = max(a, b, c)
+print (maior_num)   
+
+##Resposta Exercício 5
+
+a = float(input('Digite o primeiro número: '))
+b = float(input('Digite o segundo número: '))
+c = float(input('Digite o terceiro número: '))
+
+maior_num = max(a, b, c)
+menor_num = min(a, b, c)
+print (maior_num)
+print (menor_num) 
+
+##Resposta Exercício 6
+
+salário_hora = float(input('Digite quanto você ganha por hora: '))
+horas_trabalhadas_mês = float(input('Digite quantas horas você trabalha por mês: '))
+salário_bruto = salário_hora * horas_trabalhadas_mês
+
+imposto_renda = salário_bruto * 0.11
+inss = salário_bruto * 0.08
+sindicato = salário_bruto * 0.05
+
+descontos = imposto_renda + inss + sindicato
+
+print (f'Salário Bruto: R$ {salário_bruto: .2f}')
+print (f'Valor pago ao Imposto de Renda: R$ {imposto_renda: .2f}')
+print (f'Valor pago ao INSS: R$ {inss: .2f}')
+print (f'Valor pago ao Sindicato: R$ {sindicato: .2f}')
+print (f'Salário Liquido: R$ {salário_bruto - descontos: .2f}')
+
+##Resposta Exercício 7
+
+área = int(input('Digite em metros quadrados o tamanho da área a ser pintada: '))
+
+litros = área / 3
+preço_lata = 80
+latas_tinta = litros // 18
+if litros % 18 > 0:
+    latas_tinta += 1 
+    print (f'Quantidade de latas: {latas_tinta: .0f} e o Preço Total é: {preço_lata*latas_tinta: .2f} reais')

@@ -1,0 +1,95 @@
+Turma - DSM 2024/2
+Nome: Emanuelle Oliveira
+Disciplina: Algoritmos e lógica de programação
+
+###Lista de exercícios 1 
+
+##Resposta Exercício 1
+
+n1 = int(input ('N1:'))
+n2 = int(input ('N2:'))
+print (n1 + n2)
+
+##Resposta Exercício 2
+
+m = int(input('metros: '))
+print (f'milímetros: {m*1000}')
+
+##Resposta Exercício 3
+
+d = int(input('Dias: '))
+h = int(input('Horas: '))
+m = int(input('Minutos: '))
+s = int(input('Segundos: '))
+print (f'Total em segundos: {d*86400+h*3600+m*60+s}')
+
+##Resposta Exercício 4
+
+s = float(input('Digite o valor do salario: '))
+a = float(input('Digite a porcentagem do aumento de salario: '))
+valor_do_aumento = s*a/100
+print (f'Valor do aumento: {valor_do_aumento: .2f} ') 
+novo_salario = s*a/100 + s
+print (f'Valor do novo salario: {novo_salario: .2f}')
+
+##Resposta Exercício 5
+
+m = float(input('Digite o valor da mercadoria: '))
+d = float(input('Digite o percentual de desconto: '))
+valor_do_desconto = m*d/100
+print (f'Valor do desconto: {valor_do_desconto: .2f} ') 
+preço_a_pagar = m-(valor_do_desconto)
+print (f'Preço a pagar: {preço_a_pagar: .2f} ') 
+
+##Resposta Exercício 6
+
+d = float(input('Distância a percorrer em quilômetros: '))
+v = int(input('Velocidade média em km/h esperada da viagem: '))
+t = d/v
+print (f'Tempo de viagem estimado em horas: {t: .2f}')
+
+##Resposta Exercício 7
+
+c = int(input('Digite a temperatura em graus Celsius: '))
+f = 9*c/5 + 32
+print (f'Temperatura em Fahrenheit: {f: .0f}')
+
+##Resposta Exercício 8
+
+f = int(input('Digite a temperatura em Fahrenheit: '))
+c = 5/9*(f-32)
+print (f'Temperatura em Celsius: {c: .0f}')
+
+##Resposta Exercício 9
+
+km = float(input('Digite o número de km percorridos: '))
+d = int(input('Digite a quantidade de dias de uso do carro: '))
+preço_do_km = (km * 15/100)
+preço_da_diária = (60 * d)
+print (f'Preço a pagar: {preço_do_km + preço_da_diária}')
+
+##Resposta Exercício 10
+
+qc = int(input('Quantos cigarros são consumidos por dia: '))
+qa = float(input('Há quantos anos você fuma: '))
+fórmula_converter_anos_em_dias = (qa*365)
+fórmula_total_cigarros = (fórmula_converter_anos_em_dias*qc)
+fórmula_minutos_perdidos = (fórmula_total_cigarros*10)
+fórmula_converter_minutos_perdidos_para_dias = (fórmula_minutos_perdidos/1440)
+print (f'Dias de vida perdidos para o cigarro: {fórmula_converter_minutos_perdidos_para_dias: .0f}')
+
+##Resposta Exercício 11
+
+import sys
+sys.set_int_max_str_digits(1000000000)
+print (len(str(2**1000000)))
+
+
+
+
+
+
+
+
+
+

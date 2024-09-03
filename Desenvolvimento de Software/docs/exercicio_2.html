@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout de Cabeçalho e Colunas</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #5c528d;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .column {
+            flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+        }
+
+        .column:first-child {
+            margin-right: 10px;
+        }
+
+        .column:last-child {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>        </h1>
+    </header>
+    <div class="container">
+        <div class="column">
+            <p>Coluna 1</p>
+        </div>
+        <div class="column">
+            <p>Coluna 2</p>
+        </div>
+    </div>
+</body>
+</html>
