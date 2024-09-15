@@ -1,48 +1,171 @@
+/* CSS comentado - para lembrar depois a aplicação dessas funções */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: normal;
-    margin: 0;
-    padding: 0;
+    font-family: Arial, Helvetica, sans-serif; /* Define a ordem de preferência de fontes para o texto. Se Arial não estiver disponível, usa Helvetica. Caso nenhuma das duas esteja, usa uma fonte genérica sem serifa (sans-serif). */
+    font-size: 16px; /* Define o tamanho padrão da fonte como 16 pixels. */
+    font-style: normal; /* Define o estilo da fonte como normal (não itálico). */
+    font-weight: normal; /* Define o peso da fonte como normal (não negrito). */
+    margin: 0; /* Remove qualquer margem padrão ao redor do corpo da página. */
+    padding: 0; /* Remove qualquer espaçamento interno (padding) padrão do corpo da página. */
+    line-height: 1.6; /* Define o espaçamento entre as linhas de texto. Um valor de 1.6 significa que a altura da linha será 1.6 vezes o tamanho da fonte. */
 }
 
-.top-bar {
-    background-color: #4f4f91; /* Cor da linha azul */
-    height: 5px; /* Altura da linha azul */
-    width: 100%; /* A linha cobre toda a largura da tela */
-    margin-top: 10px; /* A linha fica 10px abaixo do topo da página */
+header {
+    padding: 20px; /* Adiciona 20 pixels de espaçamento interno em todos os lados do cabeçalho. */
+    width: 100%; /* Faz o cabeçalho ocupar 100% da largura da página. */
+    max-width: 1200px; /*define a largura máxima que um elemento pode ter*/
+    margin: 0 auto; /* Centraliza o cabeçalho horizontalmente. "0" define que não haverá margem superior/inferior, e "auto" centraliza nas laterais. */
 }
 
-.header-content {
-    display: flex; /* Usar Flexbox para controle do layout */
-    justify-content: space-between; /* Espaça os itens (logo e menu) */
-    align-items: center; /* Alinha os itens verticalmente no centro */
-    padding: 10px 20px; /* Adiciona espaçamento interno */
+.logo-unes {
+    display: flex; /* Ativa o layout flexível, permitindo alinhar e distribuir os itens dentro desse contêiner de forma mais fácil. */
+    justify-content: space-between; /* Espaça os itens (logo e menu) uniformemente, deixando um em cada extremidade. */
+    align-items: center; /* Alinha os itens (logo e menu) verticalmente ao centro dentro do contêiner. */
+    padding: 10px 0; /* Adiciona 10 pixels de espaçamento interno vertical (acima e abaixo) no contêiner. */
 }
 
 .logo {
-    height: 50px; /* Altura da logo */
-    width: auto; /* Mantém a proporção da imagem */
+    height: 80px; /* Define a altura da logo como 80 pixels. */
+    width: auto; /* Faz a largura da logo se ajustar automaticamente, mantendo a proporção original da imagem. */
 }
 
 .menu {
-    display: flex; /* Usar Flexbox para layout dos links do menu */
-    gap: 10px; /* Espaçamento entre os links */
+    display: flex; /* Define o menu como um contêiner flexível para alinhar os links horizontalmente. */
+    gap: 20px; /* Define um espaçamento de 20 pixels entre os links do menu. */
 }
 
 .menu a {
-    color: #333; /* Cor dos links */
-    text-decoration: none; /* Remove o sublinhado dos links */
-    font-weight: bold; /* Links em negrito */
+    color: #000; /* Define a cor do texto dos links do menu como preto. */
+    text-decoration: none; /* Remove o sublinhado padrão dos links. */
+    font-weight: bold; /* Define os links do menu em negrito. */
 }
 
-.menu a::after {
-    content: "|"; /* Adiciona uma barra vertical após cada link */
-    margin-left: 5px; /* Espaçamento entre o link e a barra */
-    color: #333; /* Cor da barra */
+.menu a:hover {
+    color: #4f4f91; /* Muda a cor dos links para um tom roxo (#4f4f91) quando o mouse passa por cima. */
 }
 
-.menu a:last-child::after {
-    content: ""; /* Remove a barra após o último link */
+.imagem-home {
+    display: flex; /* Define um layout flexível para a imagem principal. */
+    justify-content: center; /* Centraliza a imagem horizontalmente dentro do contêiner. */
+    align-items: center; /* Centraliza a imagem verticalmente dentro do contêiner. */
+    padding: 20px 0; /* Adiciona 20 pixels de espaçamento vertical (acima e abaixo) ao contêiner da imagem. */
+}
+
+.imagem-home img {
+    width: 100%; /* Faz a imagem ocupar 100% da largura do contêiner. */
+    max-width: 1200px; /*define a largura máxima que um elemento pode ter*/
+    height: auto; /* Ajusta a altura da imagem automaticamente para manter a proporção original. */
+    display: block; /* Remove o comportamento inline padrão da imagem, fazendo com que ela se comporte como um bloco, ocupando toda a largura disponível. */
+}
+
+main {
+    padding: 20px; /* Adiciona 20 pixels de espaçamento interno ao redor do conteúdo principal. */
+    width: 100%; /* Faz o conteúdo principal ocupar 100% da largura disponível. */
+    max-width: 1200px; /*define a largura máxima que um elemento pode ter*/
+    margin: 0 auto; /* Centraliza o conteúdo principal horizontalmente. */
+}
+
+.texto-flexbox {
+    padding: 20px; /* Adiciona 20 pixels de espaçamento interno ao redor do texto. */
+    background-color: #f9f9f9; /* Define o fundo do contêiner de texto como cinza claro. */
+    border-radius: 8px; /* Arredonda os cantos do contêiner de texto em 8 pixels. */
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra ao redor do contêiner, com deslocamento vertical de 2px, desfocada em 8px e levemente transparente. */
+}
+
+h1 {
+    text-align: left; /* Alinha o título à esquerda. */
+    color: #333; /* Define a cor do título como um tom de cinza escuro (#333). */
+}
+
+ul {
+    list-style-type: disc; /* Define o estilo da lista como discos (pontos). */
+    padding-left: 20px; /* Adiciona 20 pixels de espaçamento à esquerda dos itens da lista. */
+}
+
+ul li {
+    margin-bottom: 10px; /* Adiciona 10 pixels de espaçamento inferior entre os itens da lista. */
+}
+
+p {
+    text-align: justify; /* Justifica o texto para que ele fique alinhado nas duas margens (esquerda e direita). */
+    margin-bottom: 20px; /* Adiciona 20 pixels de espaçamento inferior entre os parágrafos. */
+}
+
+footer {
+    padding: 20px; /* Adiciona 20 pixels de espaçamento interno ao rodapé. */
+    text-align: center; /* Centraliza o texto dentro do rodapé. */
+    margin-top: 20px; /* Adiciona 20 pixels de espaçamento superior antes do rodapé. */
+    color: #000; /* Define a cor do texto no rodapé como preto. */
+}
+
+.linha-quebra {
+    width: 100%; /* Faz a linha ocupar 100% da largura disponível */
+    height: 1px; /* Define a altura da linha como 1 pixel */
+    background-color: #3b3939; /* Define a cor da linha como cinza */
+    margin: 20px 0; /* Adiciona 20px de espaçamento acima e abaixo da linha */
+}
+/* Fommulário */
+form {
+    max-width: 600px; /* Define a largura máxima do formulário como 600 pixels */
+    padding: 20px; /* Adiciona espaçamento interno dentro do formulário */
+    background-color: #1521a52d; /* Define a cor de fundo do formulário como um cinza claro */
+    border-radius: 8px; /* Arredonda os cantos do formulário */
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave ao redor do formulário */
+    margin: 0 auto /* Remove qualquer espaçamento automático e alinha o formulário à esquerda */
+}
+
+label {
+    display: block; /* Exibe o rótulo como um bloco, ocupando toda a largura disponível */
+    margin-bottom: 5px; /* Adiciona 5 pixels de espaçamento inferior ao rótulo */
+    font-weight: bold; /* Deixa o texto do rótulo em negrito */
+}
+
+input, textarea {
+    width: 100%; /* Faz os campos de entrada ocuparem toda a largura disponível */
+    padding: 10px; /* Adiciona espaçamento interno de 10 pixels dentro dos campos */
+    margin-bottom: 20px; /* Adiciona 20 pixels de espaçamento inferior entre os campos */
+    border: 1px solid #ccc; /* Define uma borda fina e cinza ao redor dos campos */
+    border-radius: 4px; /* Arredonda levemente os cantos dos campos */
+    font-size: 16px; /* Define o tamanho da fonte dentro dos campos como 16 pixels */
+    box-sizing: border-box; /* Inclui a borda e o padding na largura total dos campos */
+}
+
+textarea {
+    resize: vertical; /* Permite que o campo de texto seja redimensionado apenas verticalmente */
+}
+
+button {
+    width: 100%; /* Faz o botão ocupar toda a largura do formulário */
+    padding: 10px; /* Adiciona 10 pixels de espaçamento interno ao botão */
+    background-color: #4f4f91; /* Define a cor de fundo do botão como roxa */
+    color: #fff; /* Define a cor do texto do botão como branca */
+    border: none; /* Remove a borda padrão do botão */
+    border-radius: 4px; /* Arredonda levemente os cantos do botão */
+    font-size: 16px; /* Define o tamanho da fonte dentro do botão */
+    cursor: pointer; /* Muda o cursor para uma mãozinha ao passar sobre o botão */
+}
+
+button:hover {
+    background-color: #333; /* Altera a cor de fundo do botão para um tom de cinza escuro ao passar o mouse sobre ele */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .logo-unes {
+        flex-direction: column; /* Altera a direção do layout flexível para uma coluna em telas pequenas. */
+        text-align: center; /* Centraliza o conteúdo da logo-unes no centro. */
+    }
+
+    .menu {
+        flex-direction: column; /* Organiza os links do menu verticalmente em telas pequenas. */
+        gap: 10px; /* Define um espaçamento de 10 pixels entre os links do menu em telas pequenas. */
+        margin-top: 20px; /* Adiciona 20 pixels de espaçamento superior no menu. */
+    }
+
+    .texto-flexbox {
+        padding: 10px; /* Reduz o espaçamento interno do contêiner de texto para 10 pixels em telas pequenas. */
+    }
+
+    h1 {
+        font-size: 24px; /* Reduz o tamanho da fonte do título para 24 pixels em telas pequenas. */
+    }
 }
