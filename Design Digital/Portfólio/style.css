@@ -1,0 +1,157 @@
+/* CSS comentado - para lembrar depois a aplicação dessas funções */
+/* Estilizando o corpo do documento */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #faf3e0; /* Tom suave que lembra o mel */
+    margin: 0;
+    padding: 0;
+    color: #3b3b3b; /* Cor neutra para o texto */
+}
+
+/* Estilização do cabeçalho e navegação */
+header {
+    background-color: #2c3e50; /* Cor preta com tom azulado (sobriedade) */
+    padding: 20px;
+    color: white;
+}
+
+.logo-esgo {
+    display: grid;
+    grid-template-columns: auto 1fr; /* Organiza a logo e o menu em duas colunas */
+    align-items: center; /* Alinha verticalmente no centro */
+    gap: 20px; /* Espaçamento entre logo e menu */
+}
+
+.logo {
+    max-width: 150px;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(5, auto); /* Organiza os links do menu em linha */
+    gap: 15px; /* Espaçamento entre os links */
+    justify-self: end; /* Alinha o menu à direita */
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    background-color: #f4a261; /* Cor que lembra o mel, mas com sobriedade */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Animação suave */
+}
+
+.menu a:hover {
+    background-color: #e76f51; /* Tom de mel mais forte ao passar o mouse */
+    transform: scale(1.05); /* Aumenta levemente o tamanho */
+}
+
+/* Seção principal com Grid */
+main {
+    display: grid;
+    grid-template-columns: 1fr; /* Para dispositivos grandes, será uma coluna */
+    padding: 20px;
+}
+
+.texto-flexbox {
+    background-color: #fff; /* Cor de fundo branca para destaque */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidade */
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #264653; /* Verde musgo escuro */
+}
+
+h2 {
+    color: #2a9d8f; /* Verde natural com tom vibrante */
+    margin-top: 30px;
+}
+
+p {
+    line-height: 1.6;
+    color: #3b3b3b;
+}
+
+/* Estilização da grade de conteúdos */
+ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Grid dinâmico */
+    gap: 15px; /* Espaçamento entre os itens */
+    padding-left: 0;
+    list-style-type: none; /* Remove os marcadores de lista */
+}
+
+ul li {
+    background-color: #f4f1de; /* Tom suave de mel */
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 5px solid #264653; /* Borda verde escura para destaque */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+ul li:hover {
+    background-color: #e9c46a; /* Amarelo suave ao passar o mouse */
+    transform: translateY(-5px); /* Leve elevação ao passar o mouse */
+}
+
+/* Seção de imagem principal */
+.imagem-home img {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+/* Responsividade */
+/* Para dispositivos menores que 768px (tablets e celulares) */
+@media (max-width: 768px) {
+    .logo-esgo {
+        grid-template-columns: auto;
+        justify-items: center;
+    }
+
+    .menu {
+        grid-template-columns: repeat(3, auto); /* Menu reorganizado em 3 colunas */
+        gap: 10px;
+    }
+}
+
+/* Para dispositivos menores que 480px (smartphones) */
+@media (max-width: 480px) {
+    .texto-flexbox {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    ul li {
+        font-size: 0.9em;
+    }
+
+    .menu {
+        grid-template-columns: auto; /* Menu em uma coluna no mobile */
+    }
+}
+
+/* Rodapé */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* Animações suaves */
+.menu a:hover,
+ul li:hover {
+    transition: all 0.3s ease;
+}

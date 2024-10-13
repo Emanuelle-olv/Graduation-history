@@ -1,0 +1,177 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte geral da página */
+    margin: 0; /* Remove margens padrão */
+    padding: 20px; /* Adiciona espaço em volta do conteúdo */
+}
+
+h1, h2 {
+    text-align: center; /* Centraliza o título */
+}
+
+section {
+    margin-bottom: 40px; /* Espaço extra entre as seções */
+}
+
+/* Exercício 1: Layout de duas colunas */
+.grid-container-ex1 {
+    display: grid;
+    grid-template-areas: 
+        "col1 col2";
+    grid-template-columns: 70% 30%; 
+    grid-gap: 10px; /* Espaço entre as colunas */
+}
+
+.column:nth-child(1) {
+    grid-area: col1; /* Define a área da primeira coluna */
+    background-color: lightblue; /* Cor de fundo */
+    padding: 20px; /* Espaço interno */
+}
+
+.column:nth-child(2) {
+    grid-area: col2; /* Define a área da segunda coluna */
+    background-color: lightcoral; /* Cor de fundo */
+    padding: 20px; /* Espaço interno */
+}
+
+
+/* Exercício 2: Layout de cabeçalho e duas colunas com larguras iguais */
+.grid-container-ex2 {
+    display: grid;
+    grid-template-areas: 
+        "col1 col2";
+    grid-template-columns: 1fr 1fr; /* Duas colunas de tamanhos iguais */
+    grid-gap: 10px; /* Espaço entre as colunas */
+}
+
+.header {
+    grid-area: header;
+    background-color: rgb(98, 195, 169); /* Cor de fundo */
+    padding: 20px; /* Espaço interno */
+    text-align: center; /* Centraliza o texto do cabeçalho */
+}
+
+.column1 {
+    grid-area: col1; /* Define a área da primeira coluna */
+    background-color: lightblue; /* Cor de fundo  */
+    padding: 20px; /* Espaço interno */
+}
+
+.column2 {
+    grid-area: col2; /* Define a área da segunda coluna */
+    background-color: lightcoral; /* Cor de fundo */
+    padding: 20px; /* Espaço interno */
+}
+
+
+/* Exercício 3: Layout de três colunas com Footer usando Áreas Nomeadas */
+.grid-container-ex3 {
+    display: grid;
+    grid-template-areas: 
+        "col1 col2 col3"
+        "footer footer footer";
+    grid-template-columns: 1fr 1fr 1fr; /* Três colunas de tamanhos iguais */
+    grid-gap: 10px; /* Espaço entre as colunas */
+}
+
+.column:nth-child(1) {
+    grid-area: col1; /* Define a área da primeira coluna */
+    background-color: lightblue; /* Cor de fundo */
+    padding: 20px; /* Espaço interno */
+}
+
+.column:nth-child(2) {
+    grid-area: col2; /* Define a área da segunda coluna */
+    background-color: lightcoral; /* Cor de fundo */
+    padding: 20px; /* Espaço interno */
+}
+
+.column:nth-child(3) {
+    grid-area: col3; /* Define a área da terceira coluna */
+    background-color: lightgreen; /* Cor de fundo */
+    padding: 20px; /* Espaço interno */
+}
+
+.footer {
+    grid-area: footer; /* Define a área do rodapé */
+    background-color: lightgrey; /* Cor de fundo */
+    padding: 20px; /* Espaço interno */
+}
+
+/* Exercício 4: Layout com Sidebar Fixa usando Áreas Nomeadas */
+.grid-container-ex4 {
+    display: grid; /* Ativando o uso de grid */
+    grid-template-areas: /* Nomear as áreas do grid para facilitar o posicionamento */
+        "header header header"   /* Cabeçalho ocupa toda a largura */
+        "sidebar content content" /* Sidebar à esquerda e conteúdo à direita */
+        "footer footer footer";   /* Rodapé ocupa toda a largura */
+    grid-gap: 10px; /* Espaço entre os itens do layout */
+}
+
+.header {
+    grid-area: header; /* Define que esta é a área do cabeçalho */
+    background-color: lightblue; /* Cor de fundo */
+    padding: 20px; /* Adiciona espaço interno ao cabeçalho */
+}
+
+.sidebar {
+    grid-area: sidebar; /* Define que esta é a área da sidebar (barra lateral) */
+    background-color: lightcoral; /* Cor de fundo */
+    padding: 20px; /* Adiciona espaço interno à sidebar */
+}
+
+.content {
+    grid-area: content; /* Define que esta é a área do conteúdo principal */
+    background-color: lightgreen; /* Cor de fundo  */
+    padding: 20px; /* Adiciona espaço interno ao conteúdo */
+}
+
+.footer {
+    grid-area: footer; /* Define que esta é a área do rodapé */
+    background-color: lightgrey; /* Cor de fundo  */
+    padding: 20px; /* Adiciona espaço interno ao rodapé */
+}
+
+
+/* Exercício 5: Layout Completo de Página usando Áreas Nomeadas */
+.grid-container-ex5 {
+    display: grid;
+    grid-template-areas: 
+        "header header header"
+        "nav content sidebar"
+        "footer footer footer";
+    grid-template-columns: 20% 60% 20%; /* Definindo a largura de navegação, conteúdo e sidebar */
+    grid-template-rows: auto 1fr auto; /* Cabeçalho, conteúdo e rodapé */
+    grid-gap: 10px; /* Espaçamento entre os elementos */
+}
+
+.header {
+    grid-area: header; /* Área do cabeçalho */
+    background-color: lightgreen; /* Cor de fundo */
+    padding: 20px; /* Espaço interno */
+}
+
+.nav {
+    grid-area: nav; /* Área da navegação */
+    background-color: lightblue; /* Cor de fundo  */
+    padding: 20px; /* Espaço interno */
+}
+
+.content {
+    grid-area: content; /* Área do conteúdo principal */
+    background-color: lightcoral; /* Cor de fundo */
+    padding: 20px; /* Espaço interno */
+}
+
+.sidebar {
+    grid-area: sidebar; /* Área da barra lateral */
+    background-color: lightyellow; /* Cor de fundo*/
+    padding: 20px; /* Espaço interno */
+}
+
+.footer {
+    grid-area: footer; /* Área do rodapé */
+    background-color: lightgrey; /* Cor de fundo */
+    padding: 20px; /* Espaço interno */
+}
+

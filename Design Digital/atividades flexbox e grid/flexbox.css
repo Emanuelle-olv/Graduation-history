@@ -1,0 +1,224 @@
+/* Tirar margens e padding para todos os elementos da página */
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que o padding e a borda sejam incluídos nas dimensões dos elementos */
+}
+
+/* Estilização geral da página */
+body {
+    font-family: Arial, sans-serif; /* Define uma fonte padrão para a página */
+    background-color: #f0f8ff; /* Aplica um fundo azul claro e suave */
+    color: #333; /* Define a cor do texto padrão como preto */
+    display: flex; /* Usa flexbox para estruturar o conteúdo da página */
+    flex-direction: column; /* Organiza o conteúdo verticalmente */
+    min-height: 100vh; /* Garante que o corpo da página ocupe toda a altura da tela */
+}
+
+/* Estilização da barra de navegação */
+.navbar {
+    display: flex; /* Usa flexbox para alinhar os links horizontalmente */
+    justify-content: space-around; /* Distribui os links igualmente no espaço disponível */
+    align-items: center; /* Alinha os links verticalmente no centro */
+    background-color: #007BFF; /* Aplica uma cor de fundo azul */
+    padding: 15px; /* Adiciona espaçamento interno */
+}
+
+.navbar a {
+    text-decoration: none; /* Remove sublinhados dos links */
+    color: #fff; /* Define a cor do texto como branco */
+    font-size: 18px; /* Define o tamanho da fonte dos links */
+    padding: 10px 20px; /* Adiciona espaçamento interno aos links */
+    transition: background-color 0.3s ease; /* Cria uma transição suave na cor de fundo ao passar o mouse */
+}
+
+.navbar a:hover {
+    background-color: #0056b3; /* Altera a cor de fundo para um azul mais escuro ao passar o mouse */
+    border-radius: 5px; /* Adiciona bordas arredondadas nos links ao passar o mouse */
+}
+
+/* Estilo básico para o conteúdo principal */
+.content {
+    text-align: center; /* Centraliza o texto do conteúdo */
+    margin-top: 50px; /* Adiciona uma margem superior */
+    flex: 1; /* Permite que o conteúdo ocupe o espaço disponível */
+}
+
+.content h1 {
+    font-size: 36px; /* Define o tamanho da fonte do título */
+    margin-bottom: 20px; /* Adiciona um espaço abaixo do título */
+    color: #333; /* Define a cor do título como preto */
+}
+
+.content p {
+    font-size: 18px; /* Define o tamanho da fonte do parágrafo */
+    line-height: 1.6; /* Define o espaçamento entre linhas */
+    max-width: 600px; /* Limita a largura máxima do parágrafo */
+    margin: 0 auto; /* Centraliza o parágrafo */
+    color: #333; /* Define a cor do texto como preto */
+}
+
+/* Exercício 2: Centralizar um elemento na tela */
+.center-box {
+    display: flex; /* Usa flexbox para facilitar a centralização */
+    justify-content: center; /* Centraliza horizontalmente o conteúdo */
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    height: calc(100vh - 150px); /* Define a altura como a altura total da tela menos o espaço do navbar e rodapé */
+}
+
+.centralizado {
+    width: 300px; /* Define a largura da caixa */
+    height: 300px; /* Define a altura da caixa */
+    background-color: #007BFF; /* Aplica uma cor de fundo azul */
+    color: #ffffff; /* Define a cor do texto como branco */
+    display: flex; /* Usa flexbox para centralizar o texto dentro da caixa */
+    justify-content: center; /* Centraliza o texto horizontalmente */
+    align-items: center; /* Centraliza o texto verticalmente */
+    text-align: center; /* Alinha o texto dentro da caixa */
+    border-radius: 10px; /* Adiciona bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aplica uma leve sombra na caixa */
+}
+
+.centralizado p {
+    margin: 0; /* Remove margens do parágrafo */
+    font-size: 18px; /* Define o tamanho da fonte do texto */
+}
+
+/* Layout Responsivo do Exercício 3 */
+.container {
+    display: flex; /* Usa flexbox para organizar a barra lateral e o conteúdo principal */
+    flex: 1; /* Permite que o container ocupe o espaço disponível */
+    flex-wrap: wrap; /* Permite que os elementos "quebrem" para a próxima linha se necessário */
+    padding: 20px; /* Adiciona espaçamento interno */
+    gap: 20px; /* Adiciona espaço entre a barra lateral e o conteúdo principal */
+}
+
+/* Barra lateral */
+.sidebar {
+    background-color: #f0f0f0; /* Aplica um fundo cinza claro */
+    padding: 20px; /* Adiciona espaçamento interno */
+    flex: 1 1 250px; /* Define uma largura mínima para a barra lateral */
+    min-width: 250px; /* Define a largura mínima em pixels */
+}
+
+/* Conteúdo principal */
+.main-content {
+    background-color: #fff; /* Aplica um fundo branco */
+    padding: 20px; /* Adiciona espaçamento interno */
+    flex: 3 1 600px; /* Permite que o conteúdo principal ocupe mais espaço */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Altera a organização para empilhar os elementos verticalmente em telas menores */
+    }
+
+    .sidebar {
+        order: 2; /* Move a barra lateral para baixo do conteúdo principal */
+    }
+
+    .main-content {
+        order: 1; /* Move o conteúdo principal para cima da barra lateral */
+    }
+}
+
+/* Estilização da Galeria de Fotos (Exercício 4) */
+.gallery {
+    display: grid; /* Usa grid para organizar as imagens */
+    grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas de tamanho igual */
+    gap: 10px; /* Adiciona espaçamento entre as imagens */
+    justify-items: center; /* Centraliza as imagens nas colunas */
+    padding: 20px; /* Adiciona espaçamento interno ao redor da galeria */
+}
+
+.gallery img {
+    width: 100%; /* Garante que as imagens ocupem toda a largura do container */
+    height: auto; /* Mantém a proporção original das imagens */
+    object-fit: cover; /* Ajusta as imagens para cobrir todo o espaço disponível */
+    border-radius: 5px; /* Adiciona bordas arredondadas */
+    max-width: 200px; /* Define o tamanho máximo das imagens */
+}
+
+/* Responsividade da Galeria de Fotos */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* Em telas menores, organiza as imagens em 2 colunas */
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr; /* Em telas pequenas, organiza as imagens em uma única coluna */
+    }
+}
+
+/* Estilização da Tabela de Preços (Exercício 5) */
+.pricing-table {
+    display: flex; /* Usa flexbox para organizar os planos de preços horizontalmente */
+    justify-content: space-around; /* Distribui os planos igualmente no espaço disponível */
+    padding: 20px; /* Adiciona espaçamento interno */
+    gap: 20px; /* Adiciona espaçamento entre os planos */
+}
+
+.plan {
+    background-color: #f0f0f0; /* Fundo cinza claro para os planos */
+    padding: 20px; /* Adiciona espaçamento interno */
+    text-align: center; /* Centraliza o conteúdo dentro do plano */
+    border-radius: 10px; /* Adiciona bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra */
+    flex: 1; /* Permite que todos os planos ocupem o mesmo espaço */
+}
+
+.plan h3 {
+    font-size: 24px; /* Define o tamanho da fonte do título do plano */
+    margin-bottom: 10px; /* Adiciona espaço abaixo do título */
+}
+
+.plan p {
+    font-size: 20px; /* Define o tamanho da fonte do preço */
+    font-weight: bold; /* Deixa o preço em negrito */
+    color: #333; /* Define a cor do texto */
+}
+
+/* Cores diferentes para os planos */
+.basic {
+    background-color: #f5f5f5; /* Cinza claro para o plano Básico */
+}
+
+.standard {
+    background-color: #007BFF; /* Azul para o plano Padrão */
+    color: white; /* Texto branco para contraste */
+}
+
+.premium {
+    background-color: #4CAF50; /* Verde para o plano Premium */
+    color: white; /* Texto branco para contraste */
+}
+
+/* Responsividade da tabela de preços */
+@media (max-width: 600px) {
+    .pricing-table {
+        flex-direction: column; /* Empilha os planos verticalmente em telas pequenas */
+        align-items: center; /* Centraliza os planos verticalmente */
+    }
+}
+
+.plan ul {
+    list-style: none; /* Remove os marcadores padrão da lista */
+    padding: 0; /* Remove o padding padrão */
+    margin-top: 10px; /* Adiciona uma margem superior */
+}
+
+.plan ul li {
+    margin-bottom: 10px; /* Adiciona espaçamento entre os itens da lista */
+}
+
+/* Estilização do rodapé */
+.footer {
+    background-color: #007BFF; /* Aplica um fundo azul no rodapé */
+    color: #fff; /* Define a cor do texto como branco */
+    text-align: center; /* Centraliza o texto no rodapé */
+    padding: 15px 0; /* Adiciona espaçamento vertical no rodapé */
+    margin-top: auto; /* Garante que o rodapé fique no final da página */
+}
