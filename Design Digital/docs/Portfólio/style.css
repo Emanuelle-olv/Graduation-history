@@ -1,0 +1,121 @@
+/* Estilizando o corpo do documento */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fefaf6; /* Tom claro e suave, próximo do branco com leve toque bege */
+    margin: 0;
+    padding: 0;
+    color: #3b3b3b; /* Cor neutra para o texto */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o body cubra a altura total da viewport */
+}
+
+/* Estilização do cabeçalho e navegação */
+header {
+    background-color: #1a1a1d; /* Fundo preto suave para o cabeçalho */
+    padding: 20px;
+    color: #f0f0f0; /* Texto em branco suave */
+    display: flex;
+    align-items: center;
+}
+
+.logo-esgo {
+    display: flex;
+    align-items: center;
+    margin-right: auto; /* Garante que a logo fique à esquerda */
+}
+
+.logo {
+    max-width: 150px; /* Define um tamanho máximo mais razoável para a logo */
+    height: auto; /* Mantém a proporção da logo */
+}
+
+.nav-container {
+    margin-left: auto; /* Garante que o menu vá para a extrema direita */
+}
+
+.menu {
+    display: flex;
+    gap: 15px; /* Espaçamento entre os links */
+    justify-content: flex-end; /* Alinha o menu à direita */
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #333; /* Cor do botão */
+    border-radius: 5px;
+    font-size: 0.9rem; /* Tamanho menor para manter a sobriedade */
+    transition: background-color 0.2s ease;
+}
+
+.menu a:hover {
+    background-color: #555; /* Tom mais claro ao passar o mouse */
+}
+
+/* Seção principal */
+main {
+    flex: 1; /* O conteúdo principal ocupa o espaço restante entre o cabeçalho e o rodapé */
+    padding: 40px;
+    max-width: 900px;
+    margin: 0 auto; /* Centraliza o conteúdo principal */
+    text-align: left; /* Alinhamento à esquerda para manter clareza */
+}
+
+h1, h2 {
+    font-weight: normal;
+    color: #1a1a1d; /* Tom escuro, forte e sóbrio */
+}
+
+p {
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+/* Estilização de listas */
+ul {
+    padding-left: 20px;
+    list-style: none;
+}
+
+ul li {
+    background-color: #e8e8e8;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-left: 4px solid #333; /* Barra de destaque na lateral */
+    font-family: 'Courier New', monospace; /* Mantém o tema de programador */
+}
+
+/* Seção de imagem principal */
+.imagem-home img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+/* Responsividade */
+/* Para dispositivos menores que 768px (tablets e celulares) */
+@media (max-width: 768px) {
+    .logo {
+        max-width: 120px; /* Reduz o tamanho da logo em dispositivos menores */
+    }
+
+    .menu {
+        flex-wrap: wrap; /* Organiza o menu em múltiplas linhas, se necessário */
+    }
+}
+
+/* Rodapé */
+footer {
+    background-color: #1a1a1d;
+    color: #f0f0f0;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9rem;
+    margin-top: auto; /* Garante que o rodapé fique sempre na parte inferior da tela */
+    width: 100%;
+}
