@@ -1,0 +1,42 @@
+1)
+
+FUNCIONARIO (cod_func (Mat), Nome, DtNasc, Nacionalidade, Sexo, EstCivil, RG, CPF, Endereco, Tel, DtAdmissao)
+
+FUNC_CARGO (Cod_Cargo, cod_func (Mat),  DtInicioCargo, DtFimCargo)
+
+DEPENDENTE_FUNCIONARIO (cod_func (Mat), Cod_dependente, NomeDependente, DtNascDependente)
+
+CARGO (Cod_Cargo, Cargo)
+
+
+2)Minha resposta: (3 FN)
+
+SOLICITACAO (sol_codigo, cli_codigo, sap_codigo,  sol_data, sol_descricao, sol_valor_total, sol_data_entrega, sol_data_retirada)
+
+ ITEM_SOLICITACAO (sol_codigo, serv_codigo, serv_item_valor, serv_quant)
+
+CLIENTE (cli_codigo, cli_nome, cli_telefone)
+
+SAPATEIRO (sap_codigo, sap_nome)
+
+SERVICO (serv_codigo, serv_nome, serv_valor)
+
+
+
+
+
+1 Forma Normal (
+
+solicitacao (sol_codigo, sol_data, sol_descricao, sol_valor_total, sol_data_entrega, sol_data_retirada, cli_codigo, cli_nome, cli_telefone, sap_codigo, sap_nome)
+
+item_solicitacao (sol_codigo, serv_codigo, serv_nome, serv_valor, it_serv_valor, it_serv_quant)
+
+
+2 forma normal
+
+solicitacao (sol_codigo, sol_data, sol_descricao, sol_valor_total, sol_data_entrega, sol_data_retirada, cli_codigo, cli_nome, cli_telefone, sap_codigo, sap_nome)
+
+item_solicitacao (sol_codigo, serv_codigo, serv_nome, serv_valor, it_serv_valor, it_serv_quant)
+
+servico (serv_codigo, serv_nome, serv_valor, it_serv_valor, it_serv_quant
+
